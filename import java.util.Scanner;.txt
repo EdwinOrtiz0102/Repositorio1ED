@@ -1,0 +1,105 @@
+import java.util.Scanner;
+public class Susyjava3{
+public static void main(String [] args){
+Scanner Sc = new Scanner(System.in);
+
+int i,j;
+int op;
+String Nombre[] = new String[2];
+String Materias[] = new String[11];
+int B1 [][] = new int[2][11];
+int B2 [][] = new int[2][11];
+int B3 [][] = new int[2][11];
+int B4 [][] = new int[2][11];
+int B5 [][] = new int[2][11];
+double Promedio [][] = new double[2][11];
+
+Materias[0] = ("Idioma ");
+Materias[1] = ("Filosofia ");
+Materias[2] = ("Ingles ");
+Materias[3] = ("Computacion ");
+Materias[4] = ("Sociologia ");
+Materias[5] = ("Contabilidad ");
+Materias[6] = ("Fisica Fundamental ");
+Materias[7] = ("Educacion Fisica ");
+Materias[8] = ("Historia del Arte ");
+Materias[9] = ("Matematicas ");
+Materias[10] = ("Programacion ");
+
+for(i = 0; i < 2; i++){
+System.out.println("Ingrese el nombre del Alumno");
+Nombre[i] = Sc.nextLine();
+}
+
+do{
+System.out.println("Bienvenido al Menu de Llenado de Notas");
+System.out.println("1. Ingresar las notas del BImestre 1");
+System.out.println("2. Ingresar las notas del Bimestre 2");
+System.out.println("3. Ingresar las notas del Bimestre 3");
+System.out.println("4. Ingresar las notas del Bimestre 4");
+System.out.println("5. Ingresar las notas del Bimestre 5");
+System.out.println("6. Mostrar las Notas y el Promedio");
+System.out.println(" Ingrese la opcion que desea realizar");
+op = Sc.nextInt();
+switch (op){
+
+case 1:
+for (i = 0; i < 4; i++){
+for (j = 0; j < 2; j++){
+System.out.println("Ingrese la nota del Bimestre 1" + " " + Materias[i]);
+B1[j][i] = Sc.nextInt();
+}
+}
+break;
+case 2:
+for (i = 0; i < 4; i++){
+for (j = 0; j < 2; j++){
+System.out.println("Ingrese la nota del Bimestre 2" + " " + Materias[i]);
+B2[j][i] = Sc.nextInt();
+}
+}
+break;
+case 3:
+for (i = 0; i < 4; i++){
+for (j = 0; j < 2; j++){
+System.out.println("Ingrese la nota del Bimestre 3" + " " + Materias[i]);
+B3[j][i] = Sc.nextInt();
+}
+}
+break;
+case 4:
+for (i = 0; i < 4; i++){
+for (j = 0; j < 2; j++){
+System.out.println("Ingrese la nota del Bimestre 4" + " " + Materias[i]);
+B4[j][i] = Sc.nextInt();
+}
+}
+break;
+case 5:
+for (i = 0; i < 4; i++){
+for (j = 0; j < 2; j++){
+System.out.println("Ingrese la nota del Bimestre 5" + " " + Materias[i]);
+B5[j][i] = Sc.nextInt();
+}
+}
+break;
+case 6:
+for (i = 0; i < 4; i++){
+for (j = 0; j < 2; j++){
+Promedio[j][i] = (B1[j][i]+B2[j][i]+B3[j][i]+B4[j][i]+B5[j][i])/5;	
+}
+}
+for (i = 0; i < 4; i++){
+for (j = 0; j < 2; j++){
+System.out.println("El estudiante:" + " " + Nombre[j]);
+System.out.println("La Materia de:" + Materias[i] + " " + "{" +B1[j][i] + "}" + " " + "{" + B2[j][i] + "}" + " " + "{" + B3[j][i] + "}" + " " + "{" + B4[j][i] + "}" + " " + "{" + B5[j][i] + "}");
+System.out.println("El promedio es de:" + Promedio[j][i]);				
+ } 
+ }
+  break;
+}
+}
+while (op != 7);
+}
+
+}
